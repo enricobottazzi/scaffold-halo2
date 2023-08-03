@@ -1,0 +1,15 @@
+[package]
+name = "scaffold-halo2"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[features]
+dev-graph = ["halo2_proofs/dev-graph", "plotters"]
+
+[dependencies]
+halo2_proofs = { git = "https://github.com/privacy-scaling-explorations/halo2", tag = "v2023_04_20"}
+tabbycat = { version = "0.1", features = ["attributes"], optional = true }
+plotters = { version = "0.3.4", optional = true }
+num-bigint = "0.4"
